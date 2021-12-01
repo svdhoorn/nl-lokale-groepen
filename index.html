@@ -30,16 +30,10 @@
 
  
   // load GeoJSON from an external file
-  fetch("lokale_groepen.geojson").then(res => res.json()).then(data => {
+  $.getJSON("lokale_groepen.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
-	  onEachFeature: function(feature, layer){
-        console.log(feature.properties);
-        var content = feature.properties["name"] + ", " + feature.properties["Facebook"]; 
-        layer.bindPopup(content);
-	  }
     L.geoJson(data).addTo(map);
   });
-    
 
 	  
  jQuery(document).ready( function() {	
