@@ -1,6 +1,7 @@
 <html>
 <head>
-  <title>A Leaflet map!</title>
+  <title>XR - lokale groepen</title>
+  <link rel="icon" type="image/x-icon" href="https://extinctionrebellion.nl/app/themes/xrnl/dist/images/xrnl-hoogwater-symbol.svg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
   
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -33,7 +34,7 @@
   $.getJSON("lokale_groepen.geojson",function(data){
     var xrIcon = L.icon({
       iconUrl: 'https://extinctionrebellion.nl/app/themes/xrnl/dist/images/xrnl-hoogwater-symbol.svg',
-      iconSize: [60,50]
+      iconSize: [20,20]
     });
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
