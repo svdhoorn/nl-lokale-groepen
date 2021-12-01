@@ -43,7 +43,11 @@
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
 	var marker = L.marker(latlng, {icon: xrIconSmall});
-        marker.bindPopup(feature.properties.name + '<br/>' + feature.properties.Facebook);
+        marker.bindPopup(
+		feature.properties.name + 
+		\'</br><a href=\' + feature.properties.Facebook + \'> Facebook </a>\ +
+		\'</br><a href=\' + feature.properties.Twitter + \'> Twitter </a>\
+	);
         return marker;
       },
 	    onEachFeature: function(feature,layer)
