@@ -38,12 +38,20 @@
 
 		layer.bindPopup(popupContent);
 	}
-	  
+	 
+    data_geojson_layer = L.geoJson(lokale_groepen.geojson, {
+    onEachFeature: function(feature, layer){
+        console.log(feature.properties);
+        var content = feature.properties["name"] + ", " + feature.properties["Facebook"]; 
+        layer.bindPopup(content);
+  }
+	    }).addTo(map);
+	    
   // load GeoJSON from an external file
-  fetch("lokale_groepen.geojson").then(res => res.json()).then(data => {
+  //fetch("lokale_groepen.geojson").then(res => res.json()).then(data => {
     // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
+  //  L.geoJson(data).addTo(map);
+  //});
     
 
 	  
@@ -67,7 +75,7 @@ $('#corrections-popup-inner .xr-button').click( ()=>{ $('#corrections-popup').hi
     <div id="corrections-popup">
     <div id="corrections-popup-inner">
         <p>Lokale groep toevoegen om detail aanpassen stuur ons een <a href='mailto:info@extinctionrebellion.nl'>email</a></p>
-        <a class='xr-button' id='corrections-popup-close'>Close</a>
+        <a class='xr-button' id='corrections-popup-close'>Sluit</a>
     </div>
 
   
