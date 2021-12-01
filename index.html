@@ -38,11 +38,11 @@
     });
 	var xrIconLarge = L.icon({
       iconUrl: 'https://extinctionrebellion.nl/app/themes/xrnl/dist/images/xrnl-hoogwater-symbol.svg',
-      iconSize: [20,20]
+      iconSize: [30,30]
     });
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
-	return L.marker(latlng, {icon: xrIconSmall});
+	var marker = L.marker(latlng, {icon: xrIconSmall});
         marker.bindPopup(feature.properties.name + '<br/>' + feature.properties.Facebook);
         return marker;
       },
