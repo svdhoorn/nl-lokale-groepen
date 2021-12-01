@@ -31,10 +31,20 @@
  
   // load GeoJSON from an external file
   $.getJSON("lokale_groepen.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
+    var xrIcon = L.icon({
+      iconUrl: 'https://extinctionrebellion.nl/app/themes/xrnl/dist/images/xrnl-hoogwater-symbol.svg',
+      iconSize: [60,50]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: xrIcon});
+        marker.bindPopup(feature.properties.name + '<br/>' + feature.properties.Facebook);
+        return marker;
+      }
+    }).addTo(map);
   });
-
+	  
+	  
 	  
  jQuery(document).ready( function() {	
 
