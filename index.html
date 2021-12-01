@@ -29,7 +29,7 @@
     }).addTo(map);
 
  
-    L.geoJson(lokale_groepen.geojson, {
+    L.geoJson("lokale_groepen.geojson", {
     onEachFeature: function(feature, layer){
         console.log(feature.properties);
         var content = feature.properties["name"] + ", " + feature.properties["Facebook"]; 
