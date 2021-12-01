@@ -29,22 +29,37 @@
       minZoom: 3
     }).addTo(map);
 
- 
+ 	  
   // load GeoJSON from an external file
   $.getJSON("lokale_groepen.geojson",function(data){
-    var xrIcon = L.icon({
+    var xrIconSmall = L.icon({
+      iconUrl: 'https://extinctionrebellion.nl/app/themes/xrnl/dist/images/xrnl-hoogwater-symbol.svg',
+      iconSize: [20,20]
+    });
+	var xrIconLarge = L.icon({
       iconUrl: 'https://extinctionrebellion.nl/app/themes/xrnl/dist/images/xrnl-hoogwater-symbol.svg',
       iconSize: [20,20]
     });
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
-        var marker = L.marker(latlng,{icon: xrIcon});
+	return L.marker(latlng, {icon: xrIconSmall});
         marker.bindPopup(feature.properties.name + '<br/>' + feature.properties.Facebook);
         return marker;
-      }
+      },
+	    onEachFeature: function(feature,layer)
+            {
+            layer.on("mouseover",function(e){
+                layer.setIcon(xrIconLarge)
+            });
+            layer.on("mouseout",function(e){
+                layer.setIcon(xrIconSmall)
+            });
+            }    
     }).addTo(map);
-  });
+  });  
 	  
+  
+ 
 	  
 	  
  jQuery(document).ready( function() {	
