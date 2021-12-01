@@ -5,7 +5,7 @@
   
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.js" crossorigin=""></script>
 	
 	
 	
@@ -28,7 +28,13 @@
       minZoom: 3
     }).addTo(map);
 
-	      function onEachFeature(feature, layer) {
+  // load GeoJSON from an external file
+  fetch("lokale_groepen.geojson").then(res => res.json()).then(data => {
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
+    
+    function onEachFeature(feature, layer) {
 		var popupContent = '<p>I started out as a GeoJSON ' +
 				feature.geometry.type + ', but now I\'m a Leaflet vector!</p>';
 
@@ -38,14 +44,6 @@
 
 		layer.bindPopup(popupContent);
 	}
-	  
-  // load GeoJSON from an external file
-  fetch("lokale_groepen.geojson").then(res => res.json()).then(data => {
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
-    
-
 	  
  jQuery(document).ready( function() {	
 
@@ -62,11 +60,11 @@ $('#corrections-popup-inner .xr-button').click( ()=>{ $('#corrections-popup').hi
   </div>
   </div>
     <a id="area-corrections-button" class='xr-button'>
-    ADD OR UPDATE
+    TOEVOEGEN OF AANPASSEN
   </a>
     <div id="corrections-popup">
     <div id="corrections-popup-inner">
-        <p>Om een lokale groep toe te voegen of de details aan te passen sturen een <a href='mailto:info@extinctionrebellion.nl '>email</a></p>
+        <p>Please <a href='mailto:christophergutteridge@gmail.com'>email us</a> to add or update Local Group details.</p>
         <a class='xr-button' id='corrections-popup-close'>Close</a>
     </div>
 
