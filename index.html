@@ -28,18 +28,8 @@
       minZoom: 3
     }).addTo(map);
 
-	      function onEachFeature(feature, layer) {
-		var popupContent = '<p>I started out as a GeoJSON ' +
-				feature.geometry.type + ', but now I\'m a Leaflet vector!</p>';
-
-		if (feature.properties && feature.properties.popupContent) {
-			popupContent += feature.properties.popupContent;
-		}
-
-		layer.bindPopup(popupContent);
-	}
-	 
-    data_geojson_layer = L.geoJson(lokale_groepen.geojson, {
+ 
+    L.geoJson(lokale_groepen.geojson, {
     onEachFeature: function(feature, layer){
         console.log(feature.properties);
         var content = feature.properties["name"] + ", " + feature.properties["Facebook"]; 
