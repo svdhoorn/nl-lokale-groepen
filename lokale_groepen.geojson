@@ -1,1 +1,184 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Apeldoorn","Facebook":"https://www.facebook.com/XRApeldoorn","Twitter":"https://twitter.com/XRApeldoorn"},"geometry":{"type":"Point","coordinates":[5.971755981445312,52.211814252029576]}},{"type":"Feature","properties":{"name":"Deventer","Facebook":"https://www.facebook.com/XRDeventer","Twitter":"https://twitter.com/XRDeventer/"},"geometry":{"type":"Point","coordinates":[6.1722564697265625,52.25639009576134]}},{"type":"Feature","properties":{"name":"Zutphen","Facebook":"?","Twitter":"?"},"geometry":{"type":"Point","coordinates":[6.207275390625,52.14444515792554]}},{"type":"Feature","properties":{"name":"Enschede","Facebook":"?","Twitter":"?"},"geometry":{"type":"Point","coordinates":[6.89666748046875,52.21938689037313]}},{"type":"Feature","properties":{"name":"Eindhoven","Facebook":""},"geometry":{"type":"Point","coordinates":[5.47119140625,51.44716034698012]}},{"type":"Feature","properties":{"name":"Utrecht","Twitter":"https://twitter.com/XRUtrecht"},"geometry":{"type":"Point","coordinates":[5.11138916015625,52.10313118589299]}},{"type":"Feature","properties":{"name":"Amsterdam"},"geometry":{"type":"Point","coordinates":[4.901275634765625,52.380629111184575]}},{"type":"Feature","properties":{"name":"Groningen"},"geometry":{"type":"Point","coordinates":[6.580810546874999,53.21425694166793]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Apeldoorn",
+        "Facebook": "https://www.facebook.com/XRApeldoorn",
+        "Twitter": "https://twitter.com/XRApeldoorn"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.971755981445312,
+          52.211814252029576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Deventer",
+        "Facebook": "https://www.facebook.com/XRDeventer",
+        "Twitter": "https://twitter.com/XRDeventer/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1722564697265625,
+          52.25639009576134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zutphen",
+        "Facebook": "?",
+        "Twitter": "?"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.207275390625,
+          52.14444515792554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Enschede",
+        "Facebook": "?",
+        "Twitter": "?"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.89666748046875,
+          52.21938689037313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eindhoven",
+        "Facebook": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.47119140625,
+          51.44716034698012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Utrecht",
+        "Twitter": "https://twitter.com/XRUtrecht"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.11138916015625,
+          52.10313118589299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amsterdam"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.901275634765625,
+          52.380629111184575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Groningen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.580810546874999,
+          53.21425694166793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alkmaar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.752960205078125,
+          52.63639665997182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Almere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.204772949218749,
+          52.363860434566206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amersfoort"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.40252685546875,
+          52.15961210128131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amstelveen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.856729507446289,
+          52.30139356231511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arnhem/Nijmegen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.876312255859375,
+          51.90784911650056
+        ]
+      }
+    }
+  ]
+}
