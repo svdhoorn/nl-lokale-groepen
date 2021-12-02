@@ -44,7 +44,8 @@
       pointToLayer: function(feature,latlng){
 	var marker = L.marker(latlng, {icon: xrIconSmall});
         marker.bindPopup(
-		feature.properties.name
+		feature.properties.name +
+		"<a href=" + feature.properties.Facebook + "/> Facebook "
 	);
         return marker;
       },
