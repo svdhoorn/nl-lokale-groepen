@@ -45,8 +45,8 @@
 	var marker = L.marker(latlng, {icon: xrIconSmall});
         marker.bindPopup(
 		feature.properties.name + "<br>" +
-    "<a href=" + feature.properties.Facebook + "/> Facebook <br>" +
-    "<a href=" + feature.properties.Twitter + "/> Twitter"
+    "<a  href=" + feature.properties.Facebook + "/><img src='images/facebook-page.png'/>" + "<br>" +
+    "<a href=" + feature.properties.Twitter + "/><img src='images/twitter.png'/>"
   	);
         return marker;
       },
